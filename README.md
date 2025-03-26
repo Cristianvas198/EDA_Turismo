@@ -67,10 +67,8 @@ A continuación, se listan los datasets utilizados en el análisis y sus respect
 3. Ejecutar el análisis en un entorno Jupyter Notebook o en un script de Python.
 
 ## Contacto
-Si tienes preguntas o sugerencias, no dudes en ponerte en contacto a través de tu [GitHub](https://github.com/Cristianvas198/EDA-Turismo).
+Si tienes preguntas o sugerencias, no dudes en ponerte en contacto a través de mi [GitHub](https://github.com/Cristianvas198/EDA-Turismo).
 
----
-Este README proporciona una estructura clara y profesional para tu EDA. Puedes modificarlo según lo necesites. ¡Éxito con tu análisis!
 
 
 
