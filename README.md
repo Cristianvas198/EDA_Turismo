@@ -6,8 +6,8 @@ Este proyecto analiza los patrones de turismo en España, identificando tendenci
 
 ## Dataset
 
-**Fuentes:**
-- [Instituto Nacional de Estadística (INE) - Número de turistas según comunidad autónoma de destino principal](https://www.ine.es/jaxiT3/Datos.htm?t=10823)
+**Fuente:**
+- [Número de turistas según comunidad autónoma de destino principal](https://www.ine.es/jaxiT3/Datos.htm?t=10823)
 - [Eurostat - Turismo](https://ec.europa.eu/eurostat/web/tourism/database)
 
 **Columnas:**
@@ -29,18 +29,25 @@ Este proyecto analiza los patrones de turismo en España, identificando tendenci
 - Tendencias temporales.
 - Comparaciones entre regiones.
 
+## Librerías Utilizadas
+
+```python
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import random
+```
+
+## Carga de Datos
+
+```python
+turismo = pd.read_excel("./data/tourism_dataset.xlsx")
+```
+
 ## Conclusiones
 
 - [Incluir hallazgos clave del análisis]
-
-## Ejecución del Proyecto
-
-Para ejecutar el análisis, instala las dependencias necesarias y ejecuta el script:
-
-```bash
-pip install -r requirements.txt
-python analisis_turismo.py
-```
 
 ## Autor
 
