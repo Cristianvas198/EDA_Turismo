@@ -1,14 +1,14 @@
 # ¿Cómo viajan los turistas en España? Un estudio de tendencias y comportamiento
 
 ## Descripción del Proyecto
-Este proyecto analiza cómo ha evolucionado el turismo en España, estudiando los patrones de visitantes, sus motivos de viaje y las tipologías de turismo. A través de un análisis de datos detallado, buscamos entender las tendencias clave y descubrir historias detrás de los números, como la estacionalidad, la influencia del turismo de negocios o el impacto de eventos culturales. Un enfoque claro y accesible para quienes quieren explorar la riqueza del turismo español.
+Este proyecto analiza cómo ha evolucionado el turismo en España, estudiando los patrones de visitantes, sus motivos de viaje y las tipologías de turismo. A través de un análisis de datos detallado, buscamos entender las tendencias clave y descubrir historias detrás de los números, como la estacionalidad, la influencia del turismo de negocios. Un enfoque claro y accesible para quienes quieren explorar la riqueza del turismo español.
 
 ## Hipótesis
-- **Hipótesis 1**: El turismo en España sigue una fuerte estacionalidad, con picos en verano y descensos en invierno.
-- **Hipótesis 2**: El turismo de ocio y recreo es el más predominante en España frente a otros motivos de viaje como negocios o estudios.
-- **Hipótesis 3**: El turismo de negocios se concentra en ciertas comunidades autónomas más que en otras.
-- **Hipótesis 4**: Los turistas de ciertos países gastan más dinero en España que otros.
-- **Hipótesis 5**: Algunas comunidades autónomas han experimentado un crecimiento más acelerado en el número de turistas que otras.
+- **Hipótesis 1**: ¿El turismo en España sigue una fuerte estacionalidad, con picos en verano y descensos en invierno?
+- **Hipótesis 2**: ¿El turismo de ocio y recreo es el más predominante en España frente a otros motivos de viaje como negocios o estudios?
+- **Hipótesis 3**: ¿El turismo de negocios se concentra en ciertas comunidades autónomas más que en otras?
+- **Hipótesis 4**: ¿Los turistas de ciertos países gastan más dinero en España que otros?
+- **Hipótesis 5**: ¿Algunas comunidades autónomas han experimentado un crecimiento más acelerado en el número de turistas que otras?
 
 ## Datasets y Fuentes de Datos
 A continuación, se listan los datasets utilizados en el análisis y sus respectivas fuentes:
