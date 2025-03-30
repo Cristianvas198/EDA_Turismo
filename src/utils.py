@@ -6,7 +6,7 @@ import random
 
 
 #Funcion para sacar las muestras del Dataframe Turismo por Comunidad, Año y Temporada
-def estacion(df = turismo, año = 2024, comunidades=("Madrid",), temporadas=("invierno",)): 
+def estacion(df = turismo, año = 2024, comunidades=("Madrid",), temporadas=("invierno",)):
     '''
     Filtra el DataFrame principal con:
     - Rango de años.
@@ -17,7 +17,7 @@ def estacion(df = turismo, año = 2024, comunidades=("Madrid",), temporadas=("in
     estacion(turismo, (2020, 2024), ["Madrid", "Barcelona"], ("invierno", "primavera"))
     '''
     
-    temporada_dict={ 
+    temporada_dict={  #Con el diccionario el argumento de la funcion se compara con los numeros y determina los numeros a filtrar del Dataframe
         "primavera":(3,4,5),
         "verano" : (6,7,8),
         "otoño" : (9,10,11),
@@ -27,6 +27,7 @@ def estacion(df = turismo, año = 2024, comunidades=("Madrid",), temporadas=("in
     
     if isinstance(comunidades, str):
         comunidades = [comunidades]
+        # df = df.to_timestamp()
     filtro = (
         (df.index.strftime('%Y').astype(int) >= año[0]) &
         (df.index.strftime('%Y').astype(int) <= año[1]) &
