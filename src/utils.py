@@ -36,3 +36,34 @@ def estacion(df = turismo, año = 2024, comunidades=("Madrid",), temporadas=("in
     
     # Devuelve el DataFrame filtrado para las comunidades seleccionadas
     return df.loc[filtro, comunidades]
+
+
+def comunidades(turismo, comunidad):
+    # Diccionario de comunidades y provincias
+    comunidades_autonomas = {
+        "Andalucía": ["Almería", "Cádiz", "Córdoba", "Granada", "Huelva", "Jaén", "Málaga", "Sevilla"],
+        "Aragón": ["Huesca", "Teruel", "Zaragoza"],
+        "Asturias": ["Asturias"],
+        "Balears, Illes": ["Balears, Illes"],
+        "Canarias": ["Palmas, Las", "Santa Cruz de Tenerife"],
+        "Cantabria": ["Cantabria"],
+        "Castilla y León": ["Ávila", "Burgos", "León", "Palencia", "Salamanca", "Segovia", "Soria", "Valladolid", "Zamora"],
+        "Castilla - La Mancha": ["Albacete", "Ciudad Real", "Cuenca", "Guadalajara", "Toledo"],
+        "Cataluña": ["Barcelona", "Girona", "Lleida", "Tarragona"],
+        "Comunitat Valenciana": ["Alicante/Alacant", "Castellón/Castelló", "Valencia/València"],
+        "Extremadura": ["Badajoz", "Cáceres"],
+        "Galicia": ["Coruña, A", "Lugo", "Ourense", "Pontevedra"],
+        "Madrid": ["Madrid"],
+        "Murcia": ["Murcia"],
+        "Navarra": ["Navarra"],
+        "País Vasco": ["Araba/Álava", "Bizkaia", "Gipuzkoa"],
+        "Rioja, La": ["Rioja, La"],
+        "Ceuta": ["Ceuta"],
+        "Melilla": ["Melilla"]
+    }
+    provincias = comunidades_autonomas.get(comunidad, [])
+    if provincias:
+        return turismo.loc[:, turismo.columns.intersection(provincias)]
+    else:
+        print(f"La comunidad '{comunidad}' no existe.")
+        return None
