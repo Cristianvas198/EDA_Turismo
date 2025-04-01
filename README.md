@@ -1,73 +1,63 @@
-# ¿Cómo viajan los turistas en España? Un estudio de tendencias y comportamiento
+# ¿Cómo viajan los turistas en España?
 
-## Descripción del Proyecto
-Este proyecto analiza cómo ha evolucionado el turismo en España, estudiando los patrones de visitantes, sus motivos de viaje y las tipologías de turismo. A través de un análisis de datos detallado, buscamos entender las tendencias clave y descubrir historias detrás de los números, como la estacionalidad, la influencia del turismo de negocios. Un enfoque claro y accesible para quienes quieren explorar la riqueza del turismo español.
+### Un estudio de tendencias y comportamiento del turismo en España
 
-## Hipótesis
-- **Hipótesis 1**: ¿El turismo en España sigue una fuerte estacionalidad, con picos en verano y descensos en invierno?
-- **Hipótesis 2**: ¿El turismo de ocio y recreo es el más predominante en España frente a otros motivos de viaje como negocios o estudios?
-- **Hipótesis 3**: ¿El turismo de negocios se concentra en ciertas comunidades autónomas más que en otras?
-- **Hipótesis 4**: ¿Los turistas de ciertos países gastan más dinero en España que otros?
-- **Hipótesis 5**: ¿Algunas comunidades autónomas han experimentado un crecimiento más acelerado en el número de turistas que otras?
+## Descripción
+Este proyecto es un Análisis Exploratorio de Datos (EDA) sobre las tendencias y el comportamiento del turismo en España. Utiliza datos del Instituto Nacional de Estadística (INE) para examinar patrones de estacionalidad, tipología de viaje, turismo de negocios y gasto de los turistas según su país de origen.
 
-## Datasets y Fuentes de Datos
-A continuación, se listan los datasets utilizados en el análisis y sus respectivas fuentes:
+## Hipótesis a trabajar en este EDA
+1. ¿El turismo en España sigue una fuerte estacionalidad?
+2. ¿Es más frecuente el turismo de estancia o la excursión?
+3. ¿El turismo de negocios está creciendo en España?
+4. ¿Los turistas de ciertos países gastan más que otros en España?
 
-1. **Viajeros y pernoctaciones por comunidades autónomas y provincias**  
-   - Archivo: `datos_turismo.csv`  
-   - Fuente: [INE - Tabla 2074](https://www.ine.es/jaxiT3/Tabla.htm?t=2074)  
-   - Carga de datos: `df_1 = pd.read_csv("./data/datos_turismo.csv", delimiter=',')`
+## Librerías utilizadas
+```python
+import pandas as pd
+import numpy as np
+import seaborn as sb
+import random
+import matplotlib.pyplot as plt
+import plotly.graph_objects as go
+from datetime import datetime
+from matplotlib.ticker import FuncFormatter
+```
 
-2. **Número de visitantes según tipología**  
-   - Archivo: `datos_tipologia.csv`  
-   - Fuente: [INE - Tabla 10821](https://www.ine.es/jaxiT3/Tabla.htm?t=10821)  
-   - Carga de datos: `df_2 = pd.read_csv("./data/datos_tipologia.csv", delimiter=',')`
+## Dataset y Fuentes
+Este proyecto utiliza datos abiertos del Instituto Nacional de Estadística de España (INE):
 
-3. **Número de turistas según motivo principal del viaje**  
-   - Archivo: `datos_motivo.csv`  
-   - Fuente: [INE - Tabla 13864](https://www.ine.es/jaxiT3/Tabla.htm?t=13864)  
-   - Carga de datos: `df_3 = pd.read_csv("./data/datos_motivo.csv", delimiter=',')`
-
-4. **Gasto de los turistas internacionales según país de residencia**  
-   - Archivo: `datos_gasto_pais.csv`  
-   - Fuente: [INE - Tabla 10838](https://www.ine.es/jaxiT3/Tabla.htm?t=10838)  
-   - Carga de datos: `df_4 = pd.read_csv("./data/datos_gasto_pais.csv", delimiter=',')`
-
-5. **Gasto de los turistas internacionales según motivo principal del viaje**  
-   - Archivo: `datos_sector.csv`  
-   - Fuente: [INE - Tabla 23995](https://www.ine.es/jaxiT3/Tabla.htm?t=23995)  
-   - Carga de datos: `df_5 = pd.read_csv("./data/datos_sector.csv", delimiter=',')`
-
-## Objetivos del Análisis
-- Identificar patrones de estacionalidad en el turismo español.
-- Analizar las principales motivaciones de los turistas.
-- Evaluar la distribución del turismo de negocios en distintas regiones.
-- Comparar el gasto según la nacionalidad de los turistas.
-- Estudiar el crecimiento del turismo en distintas comunidades autónomas.
-
-## Herramientas Utilizadas
-- **Python**: Lenguaje principal para el análisis de datos.
-- **Librerías utilizadas:**
-  - `pandas` para la manipulación de datos.
-  - `numpy` para operaciones numéricas.
-  - `seaborn` para visualización de datos.
-  - `matplotlib.pyplot` para generación de gráficos.
-- **Jupyter Notebook**: Para la documentación y ejecución del código.
-
-## Instrucciones de Uso
-1. Clonar el repositorio:
-   ```bash
-   git clone https://github.com/Cristianvas198/EDA-Turismo.git
-   cd EDA-Turismo
-   ```
-2. Instalar las dependencias necesarias:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Ejecutar el análisis en un entorno Jupyter Notebook o en un script de Python.
+- **Viajeros y pernoctaciones por comunidades autónomas y provincias**  
+  Dataset: `./data/tourism_dataset.xlsx`  
+  Fuente: [INE - Tabla 2074](https://www.ine.es/jaxiT3/Tabla.htm?t=2074)
+  
+- **Número de visitantes según tipología**  
+  Dataset: `./data/tipologia_viaje.xlsx`  
+  Fuente: [INE - Tabla 10821](https://www.ine.es/jaxiT3/Tabla.htm?t=10821)
+  
+- **Número de turistas según motivo principal del viaje**  
+  Dataset: `./data/motivo_viaje.xlsx`  
+  Fuente: [INE - Tabla 13864](https://www.ine.es/jaxiT3/Tabla.htm?t=13864)
+  
+- **Gasto de los turistas internacionales según país de residencia**  
+  Dataset: `./data/Gasto_segun_paisxlsx.xlsx`  
+  Fuente: [INE - Tabla 10838](https://www.ine.es/jaxiT3/Tabla.htm?t=10838)
+  
+- **Gasto de los turistas internacionales según motivo principal del viaje**  
+  Dataset: `./data/Gasto_por_sector.xlsx`  
+  Fuente: [INE - Tabla 23995](https://www.ine.es/jaxiT3/Tabla.htm?t=23995)
+  
+## Repositorio
+Puedes encontrar el código y los archivos de este proyecto en GitHub:  
+[Repositorio en GitHub](https://github.com/Cristianvas198/Turismo_Spain.git)
 
 ## Contacto
-Si tienes preguntas o sugerencias, no dudes en ponerte en contacto a través de mi [GitHub](https://github.com/Cristianvas198/EDA-Turismo).
+Si tienes alguna pregunta o sugerencia, no dudes en abrir un issue en el repositorio.
+
+---
+
+© 2025 Cristian Vásquez
+
+
 
 
 
