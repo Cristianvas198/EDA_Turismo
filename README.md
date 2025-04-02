@@ -1,6 +1,7 @@
 # ¿Cómo viajan los turistas en España?
 
 ### Un estudio de tendencias y comportamiento del turismo en España
+![Turismo España](./Imagenes/Turismo_banner.png)
 
 ## Descripción
 Este proyecto es un Análisis Exploratorio de Datos (EDA) sobre las tendencias y el comportamiento del turismo en España. Utiliza datos del Instituto Nacional de Estadística (INE) para examinar patrones de estacionalidad, tipología de viaje, turismo de negocios y gasto de los turistas según su país de origen.
@@ -18,7 +19,10 @@ import numpy as np
 import seaborn as sb
 import random
 import matplotlib.pyplot as plt
+import matplotlib.ticker as mticker 
 import plotly.graph_objects as go
+import qrcode
+import warnings
 from datetime import datetime
 from matplotlib.ticker import FuncFormatter
 ```
