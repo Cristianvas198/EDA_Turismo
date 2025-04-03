@@ -67,3 +67,6 @@ def comunidades(turismo, comunidad):
     else:
         print(f"La comunidad '{comunidad}' no existe.")
         return None
+    
+def format_millions(x, p):
+    return f'{int(x/500000)}M'
